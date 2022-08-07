@@ -10,9 +10,38 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  font-size: 60px;
+  font-size: 48px;
 }
 
 .home-container img {
-  margin-left: 150px;
+  margin-left: 80px;
 }
+
+.mobile-nav {
+  background: #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  height: 65px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.mobile-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.icon img {
+  width: 50px;
+}
+
+/* @media screen and (min-width: 600px) {
+  .mobile-nav {
+    display: none;
+  }
+} */
