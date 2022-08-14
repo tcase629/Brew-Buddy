@@ -5,27 +5,27 @@ export default function Footer() {
     <nav className="mobile-nav">
       <ul>
         <li>
-          <a href="/calc1" className="icon">
+          <a href="/abv" className="icon">
             <img src="images/brew.png" alt="" />
           </a>
         </li>
         <li>
-          <a href="/calc2" className="icon">
+          <a href="/diluteandboil" className="icon">
             <img src="images/hops.png" alt="" />
           </a>
         </li>
         <li>
-          <a href="/calc3" className="icon">
+          <a href="/gravity" className="icon">
             <img src="images/keg.png" alt="" />
           </a>
         </li>
         <li>
-          <a href="/calc4" className="icon">
+          <a href="/hydrometer" className="icon">
             <img src="images/pot.png" alt="" />
           </a>
         </li>
         <li>
-          <a href="/calc5" className="icon">
+          <a href="/strikewater" className="icon">
             <img src="images/wheat.png" alt="" />
           </a>
         </li>
