@@ -2,12 +2,22 @@
 import React from 'react'
 
 export default function Gravity() {
+  const [gravityData, setGravityData] = React.useState(
+    {measuredGravity: "", targetGravity: "", volume: ""}
+  )
 
-function handleChange() {
-
+function handleChange(event) {
+  setGravityData(prevGravityData=> {
+    return {
+      ...prevGravityData,
+      [event.target.name]: event.target.value
+    }
+  })
 }
 
-const answer = "answer"
+const pointsDifference = (gravityData.targetGravity - gravityData.measuredGravity) * 1000
+const pointsTotal = pointsDifference * gravityData.volume
+const answer = pointsTotal / 49
 
   return (
     <div>
@@ -16,26 +26,26 @@ const answer = "answer"
           <input 
             type="text" 
             placeholder="Volume"
-            name=""
-            value=""  
+            name="volume"
+            value={gravityData.volume}  
             onChange={handleChange}
           />
           <input 
             type="text" 
             placeholder="Meausured Gravity"
-            name=""
-            value="" 
+            name="measuredGravity"
+            value={gravityData.measuredGravity} 
             onChange={handleChange} 
           />
           <input 
             type="text" 
             placeholder="Target Gravity"
-            name=""
-            value=""  
+            name="targetGravity"
+            value={gravityData.targetGravity}  
             onChange={handleChange}
           />
         </form>
-        <div>{answer}</div>
+        <div>Add {answer.toFixed(3)} lbs of DME</div>
     </div>
   )
 }
