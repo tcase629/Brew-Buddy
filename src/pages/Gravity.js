@@ -45,7 +45,10 @@ const answer = pointsTotal / 49
             onChange={handleChange}
           />
         </form>
-        <div>Add {answer.toFixed(3)} lbs of DME</div>
+        <div>Add {gravityData.volume !== "" && 
+          gravityData.measuredGravity !== "" && 
+          gravityData.targetGravity !== "" ?
+          answer.toFixed(3) : "0"} lbs of DME</div>
     </div>
   )
 }

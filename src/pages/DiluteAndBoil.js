@@ -50,7 +50,11 @@ function handleChange(event) {
             onChange={handleChange}
           />
         </form>
-        <div>{volumeChange.toFixed(2)}</div>
+        <div>{diluteAndBoilData.currentVolume !== "" && 
+          diluteAndBoilData.measuredGravity !== "" && 
+          diluteAndBoilData.targetGravity !== "" ? 
+          volumeChange.toFixed(2) : "0"}
+        </div>
       <h3>Boil Off</h3>
         <form>
           <input 
@@ -75,7 +79,10 @@ function handleChange(event) {
             onChange={handleChange}
           />
         </form>
-        <div>{boilOffConvert.toFixed(3)}</div>
+        <div>{diluteAndBoilData.currentBoilVolume !== "" && 
+          diluteAndBoilData.targetVolume !== "" && 
+          diluteAndBoilData.measuredBoilGravity !== "" ?
+          boilOffConvert.toFixed(3) : "0"}</div>
     </div>
   )
 }

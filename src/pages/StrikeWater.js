@@ -20,7 +20,6 @@ export default function StrikeWater() {
   const ratio = strikeData.ratio
   const first = (0.2 / ratio) * (tTemp - gTemp)
   const strikeTotal = Math.round(parseInt(first) + parseInt(tTemp))
-  //fix calculation JS (0.2 / r) * (t2 - t1) + t2
 
   return (
     <div>
@@ -47,7 +46,10 @@ export default function StrikeWater() {
               onChange={handleChange}
               value={strikeData.ratio}
             />
-            <div>{strikeTotal}° F</div>
+            <div>{strikeData.targetTemp !== "" && 
+              strikeData.grainTemp !== "" && 
+              strikeData.ratio !== "" ?
+              strikeTotal : "0"}° F</div>
         </form>
     </div>
   )

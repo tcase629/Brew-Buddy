@@ -46,7 +46,10 @@ export default function Hydrometer() {
             onChange={handleChange}
             value={hydrometerData.calibratedTemp}
           />
-          <div>{correctedGravity.toFixed(3)}</div>
+          <div>{hydrometerData.specificGravity !== "" && 
+            hydrometerData.currentTemp !== "" && 
+            hydrometerData.calibratedTemp !== "" ?
+            correctedGravity.toFixed(3) : "0"}</div>
         </form>
     </div>
   )

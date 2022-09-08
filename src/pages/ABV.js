@@ -37,7 +37,7 @@ export default function ABV() {
             onChange={handleChange}
             value={formData.finalGravity}
           />
-          <div>{total.toFixed(2)}%</div>
+          <div>{formData.originalGravity !== "" && formData.finalGravity !== "" ? total.toFixed(2) : "0"}%</div>
         </form>
     </div>
   )
